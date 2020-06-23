@@ -1,11 +1,15 @@
 const mysql = require("mysql");
+require("dotenv").config();
+
+const username = process.env.USER;
+const password = process.env.PASSWORD;
 
 // Create connection to DB and enter credentials
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "phillidp1989",
-    password: "Welbeck19",
+    user: username,
+    password: password,
     database: "employee_tracker_db",
   }); 
 
